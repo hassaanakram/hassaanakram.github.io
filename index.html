@@ -18,9 +18,9 @@
 		var myDay = myDate.getDay(); 
 		
         // Array of days.
-        var timing = ['09:00-09:50', '10:00-10:50', '11:00-11:50', '12:00-12:50', '2:00-2:50', '3:00-3:50', '4:00-4:50'] 
+        var timing = ['09:00-09:50', '10:00-10:50', '11:00-11:50', '12:00-12:50', '1:00-1:59', '2:00-2:50', '3:00-3:50', '4:00-4:50'] 
         var lectures = {
-            0: ['None', 'None', 'None', 'None', 'None', 'None', 'None', ],
+            0: ['Bhai mere aaj to maafi de de'],
             1:
             ['Digital Signal Processing (Lab)',
             'Digital Signal Processing (Lab)',
@@ -62,14 +62,7 @@
                'Digital Signal Processing',
                'Digital Signal Processing',
                'Makeup Slot/Library Period'],
-            6:['None',
-               'None',
-               'None',
-               'None',
-               'None',
-               'None',
-               'None',
-               'None']
+            6:['Bhai mere aaj to maafi de de']
         }
 		 var weekday = ['Sunday', 'Monday', 'Tuesday', 
 			'Wednesday', 'Thursday', 'Friday', 'Saturday' 
@@ -91,7 +84,7 @@
 		hours = hours ? hours : 12; 
 		var minutes = myDate.getMinutes(); 
 		minutes = minutes < 10 ? '0' + minutes : minutes; 
-		var myTime = hours + " " + ampm + " : " + minutes+" minutes" ; 
+		var myTime = hours + ":" + minutes + " " + ampm ; 
 		document.write("\tCurrent time is : " + myTime); 
 	</script> 
 </ul>
