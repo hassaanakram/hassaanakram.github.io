@@ -72,7 +72,7 @@
         var todayLecture = lectures[myDay]
         var i;
         for (i = 0; i < todayLecture.length; i++) {
-        var code = todayLecture.length == 1 ? '<li style="width:70%"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/NUST_Vector.svg/1200px-NUST_Vector.svg.png"/>      <div class="details"><span class="name">'+todayLecture[i]+'</span></div></li><br>' : '<li style="width:70%"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/NUST_Vector.svg/1200px-NUST_Vector.svg.png"/>      <div class="details"><span class="name">'+todayLecture[i]+'</span><span class="title">Time: '+timing[i]+'</span></div></li><br>';
+        var code = todayLecture.length == 1 ? '<li style="width:70%"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/NUST_Vector.svg/1200px-NUST_Vector.svg.png"/>      <div class="details"><h1 float:centre>'+todayLecture[i]+'</h1></div></li><br>' : '<li style="width:70%"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/NUST_Vector.svg/1200px-NUST_Vector.svg.png"/>      <div class="details"><span class="name">'+todayLecture[i]+'</span><span class="title">Time: '+timing[i]+'</span></div></li><br>';
         document.write(code);
         }
         
