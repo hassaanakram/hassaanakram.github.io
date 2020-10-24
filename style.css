@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOUuhs.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOUuhs.ttf) format('truetype');
+  }
+  body {
+    font-family: "open sans";
+    color: #444;
+    font-size: 1em;
+  }
+  .container {
+    padding: 15px;
+  }
+  .clearfloat {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .cards li {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    font-size: 0.9em;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+  }
+  .cards li:after,
+  .cards li:before {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .cards li img {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    float: left;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .cards li .details {
+    float: left;
+    text-align: left;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0);
+    min-width: 250px;
+  }
+  .cards li .details > span,
+  .cards li .details > a {
+    display: block;
+    padding: 0 15px 0 35px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    position: relative;
+  }
+  .cards li .details > span:before,
+  .cards li .details > a:before {
+    display: inline-block;
+    font: normal normal normal 13px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-right: 15px;
+    width: 15px;
+    text-align: center;
+    color: #444;
+  }
+  .cards li .details a {
+    color: #57893c;
+    -webkit-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
+  }
+  .cards li .details a:hover,
+  .cards li .details a:focus {
+    color: #97c77e;
+    -webkit-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
+  }
+  .cards li .details .name {
+    font-size: large;
+    font-weight: 600;
+  }
+  .cards li .details .name:before {
+    content: "\f2c0";
+  }
+  .cards li .details .title:before {
+    content: "\f2c1";
+  }
+  .cards li .details .phone:before {
+    content: "\f095";
+  }
+  .cards li .details .email:before {
+    content: "\f003";
+  }
+  .cards li:hover {
+    background: rgba(235, 237, 189, 0.5);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+  .cards li:hover img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  .cards li:hover .details {
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    text-shadow: 1px 1px #dfe295;
+  }
+  @media (max-width: 800px) {
+    .cards li {
+      display: block;
+      width: auto;
+      max-width: 300px;
+      margin: 30px auto;
+    }
+    .cards li img,
+    .cards li .details {
+      float: none;
+    }
+    .cards li img {
+      margin: 0 auto;
+    }
+    .cards li .details {
+      margin-top: 20px;
+      text-align: center;
+      min-width: 0;
+    }
+    .cards li .details span,
+    .cards li .details a {
+      padding: 0;
+      white-space: break-all;
+      word-wrap: break-word;
+    }
+    .cards li .details span:before,
+    .cards li .details a:before {
+      display: none;
+    }
+  }
+  

@@ -1,1 +1,101 @@
-Timetable
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> 
+		TimeTable for today
+    </title> 
+    <link rel="icon" href="time.png">
+</head> 
+
+<body> 
+<link rel="stylesheet" href="style.css">
+<div class="contaniner">
+<ul class="cards">
+    <script type="text/javascript"> 
+		var myDate = new Date(); 
+		var myDay = myDate.getDay(); 
+		
+        // Array of days.
+        var timing = ['09:00-09:50', '10:00-10:50', '11:00-11:50', '12:00-12:50', '2:00-2:50', '3:00-3:50', '4:00-4:50'] 
+        var lectures = {
+            0: ['None', 'None', 'None', 'None', 'None', 'None', 'None', ],
+            1:
+            ['Digital Signal Processing (Lab)',
+            'Digital Signal Processing (Lab)',
+            'Electrical Machines (Lab)',
+            'Electrical Machines (Lab)',
+            'Communication Systems (Lab)',
+            'Communication Systems (Lab)',
+            'Makeup Slot/Library Period',
+            'Makeup Slot/Library Period'], 
+            2:['Digital Signal Processing (Lab)',
+            'Digital Signal Processing (Lab)',
+            'Electrical Machines (Lab)',
+            'Electrical Machines (Lab)',
+            'Communication Systems (Lab)',
+            'Communication Systems (Lab)',
+            'Makeup Slot/Library Period',
+            'Makeup Slot/Library Period'], 
+			3:['Makeup Slot/Library Period', 
+            'Probability and Statistics',
+            'Electrical Machines', 
+            'Communication Systems', 
+            'Lunch + Prayer Break', 
+            'Technical and Business Writing', 
+            'Makeup Slot/Library Period',
+            'Makeup Slot/Library Period'], 
+            4:['Electrical Machines', 
+            'Technical and Business Writing', 
+            'Probability and Statistics', 
+            'Communication Systems', 
+            'Lunch + Prayer Break', 
+            'Digital Signal Processing', 
+            'Makeup Slot/Library Period',
+            'Makeup Slot/Library Period'],
+            5:['Makeup Slot/Library Period',
+               'Probability and Statistics',
+               'Electrical Machines',
+               'Communication Systems',
+               'Lunch + Prayer Break',
+               'Digital Signal Processing',
+               'Digital Signal Processing',
+               'Makeup Slot/Library Period'],
+            6:['None',
+               'None',
+               'None',
+               'None',
+               'None',
+               'None',
+               'None',
+               'None']
+        }
+		 var weekday = ['Sunday', 'Monday', 'Tuesday', 
+			'Wednesday', 'Thursday', 'Friday', 'Saturday' 
+		]; 
+        
+        document.write("<h3>Today is : " + weekday[myDay]+"</h3>");  
+        var todayLecture = lectures[myDay]
+        var i;
+        for (i = 0; i < todayLecture.length; i++) {
+        var code = '<li style="width:70%"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/NUST_Vector.svg/1200px-NUST_Vector.svg.png"/>      <div class="details"><span class="name">'+todayLecture[i]+'</span><span class="title">Time: '+timing[i]+'</span></div></li><br>';
+        document.write(code);
+        }
+        
+		
+		// get hour value. 
+		var hours = myDate.getHours(); 
+		var ampm = hours >= 12 ? 'PM' : 'AM'; 
+		hours = hours % 12; 
+		hours = hours ? hours : 12; 
+		var minutes = myDate.getMinutes(); 
+		minutes = minutes < 10 ? '0' + minutes : minutes; 
+		var myTime = hours + " " + ampm + " : " + minutes+" minutes" ; 
+		document.write("\tCurrent time is : " + myTime); 
+	</script> 
+</ul>
+</div>
+</body> 
+
+</html>
